@@ -1,0 +1,263 @@
+/* Variables */
+
+$color-one: #7f8c8d;
+$color-two: #22f10f;
+
+$color-text-one: #ffffff;
+$color-text-two: #000000;
+
+$font-text: 'Heebo', sans-serif;
+$font-header: 'Source Serif Pro', serif;
+$font-brand: 'Great Vibes', cursive;
+
+/* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: $font-text;
+  line-height: 1.7;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+section {
+  padding: 96px 0;
+}
+.btn {
+  display: inline-block;
+  min-width: 250px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: $font-text;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid $color-two;
+  background-color: $color-two;
+  color: $color-text-one;
+  a:hover {
+    opacity: 0.8;
+  }
+}
+.section-title {
+  font-size: 48px;
+  margin: 0;
+}
+.title {
+  margin-bottom: 96px;
+}
+p {
+  color: $color-one;
+  font-family: $font-header;
+  margin: 0;
+}
+/* Navigation */
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: $color-text-one;
+    font-weight: 400;
+  }
+  a:hover {
+    color: $color-two;
+  }
+}
+.navbar-brand {
+  text-align: center;
+  a {
+    text-decoration: none;
+    font-family: $font-brand;
+    font-size: 3rem;
+    color: $color-two;
+  }
+}
+.navbar-content {
+  text-align: center;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: $color-one;
+  }
+}
+
+/* Header */
+
+.splash img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(40%);
+}
+
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    color: $color-text-one;
+    font-size: 6rem;
+    margin: 0;
+  }
+  h4 {
+    font-family: $font-header;
+    color: $color-text-one;
+    font-size: 2.25rem;
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+/* Secton Services */
+
+.services {
+  text-align: center;
+  i {
+    border: $color-two 1px solid;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    scale: 3;
+    color: $color-two;
+    margin-bottom: 15px;
+  }
+}
+
+/* Section Our portfolio */
+
+.our-portfolio {
+  text-align: center;
+  background: #ecf0f1;
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  h2 {
+    margin: 0;
+  }
+}
+.card {
+  max-width: 300px;
+  margin: 0 auto 40px auto;
+}
+.card-body {
+  background: $color-text-one;
+  padding: 15px;
+  width: 300px;
+}
+
+/* Page-footer */
+
+.page-footer {
+  padding: 48px 0;
+  margin: 0 auto;
+  width: 100%;
+  display: inline-block;
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    font-size: 0;
+    padding: 2px;
+  }
+  i {
+    font-size: 25px;
+    background-color: $color-text-two;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: $color-text-one;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.9;
+    &:hover {
+      scale: (1.1);
+    }
+  }
+}
+
+// /* Media */
+
+@media (max-width: 767px) {
+  section {
+    padding: 0;
+  }
+  .navbar-brand {
+    padding: 20px;
+  }
+  .navbar-content {
+    width: 100%;
+  }
+  .navigation {
+    ul {
+      padding: 0;
+      font-size: 14px;
+    }
+    li {
+      margin-right: 5px;
+    }
+  }
+  .services-box {
+    margin-bottom: 50px;
+  }
+  .splash-inner {
+    h1 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .services-box {
+    margin-bottom: 50px;
+  }
+  .splash-inner {
+    h1 {
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 2rem;
+    }
+  }
+}
